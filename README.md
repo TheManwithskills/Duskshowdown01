@@ -1,11 +1,11 @@
-# Showdown-Boilerplate
+# Inferno Server
 
 [![Build Status](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate.svg)](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate)
 [![Dependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate)
 [![devDependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate/dev-status.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate#info=devDependencies)
 
-Showdown Boilerplate is a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
-private servers.
+The Inferno Server is a Showdown Boilerplate (a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
+private servers).
 
 What is a boilerplate? Boilerplate is any text that is or can be reused in new
 contexts or applications without being greatly changed from the original.
@@ -14,24 +14,13 @@ This repository contains the files needed to set up your own Pokémon Showdown
 server with all the amazing stuff that private Pokémon Showdown servers like
 EOS, Frost, or Pandora has.
 
-For more information on Pokémon Showdown, visit the main
-[Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown) repository.
-
-If you would like to use the old version of Showdown-Boilerplate, go to this
-[commit](https://github.com/CreaturePhil/Showdown-Boilerplate/tree/79ede733015af70047fef1f5ea53011f6d5368df).
-
-Check out the [EosDB](https://github.com/CreaturePhil/Showdown-Boilerplate/tree/eosdb)
-alternative that has all of the features below except it only uses `EosDB` instead of
-the other databases.
 
 ## Features
 
 - Numerous *cool* commands such as /urbandefine or /poof
 - Emoticons in chat and private messages
-- Polls, Hangman, Profile, and Tells
+- Polls, Hangman, Profile, Tells, Night Club, TCs, and Anagrams
 - Economy (bucks system, shop, tournament winnings, lottery)
-- Nightclub, anagrams, and tcs.
-- So many forms of monotype and randoms tiers.
 - Lowdb and MySql database support
 
 ## Quick Start
