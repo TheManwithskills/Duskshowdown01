@@ -35,9 +35,8 @@ $ node app.js
 
 This boilerplate is brought to you and maintained by the following people:
 
-[![Philip La](https://avatars3.githubusercontent.com/u/5875574?s=117)](http://creaturephil.github.io) | [![jd](https://avatars1.githubusercontent.com/u/2987451?s=117)](https://github.com/jd4564)
-[!Charizardthefiremage (https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)]
-
+[![Philip La](https://avatars3.githubusercontent.com/u/5875574?s=117)](http://creaturephil.github.io) | [![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
+:---:|:---:|:---:|:---:|:---:
 
 ## License
 
