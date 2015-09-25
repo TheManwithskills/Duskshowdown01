@@ -4,12 +4,11 @@
 ********************************/
 
 var fs = require('fs');
-var serialize = require('node-serialize');
 var trainerCards = {};
 
 function loadTrainerCards () {
 	try {
-		trainerCards = serialize.unserialize(fs.readFileSync('config/trainercards.json', 'utf8'));
+		trainerCards = request.unrequest(fs.readFileSync('config/trainercards.json', 'utf8'));
 		Object.merge(CommandParser.commands, trainerCards);
 	} catch (e) {}
 }
@@ -19,7 +18,6 @@ setTimeout(function load() {
 }, 1000);
 
 function saveTrainerCards() {
-	fs.writeFileSync('config/trainercards.json', serialize.serialize(trainerCards));
 	Object.merge(CommandParser.commands, trainerCards);
 }
 
