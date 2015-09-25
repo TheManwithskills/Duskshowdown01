@@ -30,6 +30,8 @@ the other databases.
 - Emoticons in chat and private messages
 - Polls, Hangman, Profile, and Tells
 - Economy (bucks system, shop, tournament winnings, lottery)
+- Nightclub, anagrams, and tcs.
+- So many forms of monotype and randoms tiers.
 - Lowdb and MySql database support
 
 ## Quick Start
