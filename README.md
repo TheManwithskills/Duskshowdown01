@@ -20,6 +20,8 @@ EOS, Frost, or Pandora has.
 - Numerous *cool* commands such as /urbandefine or /poof
 - Emoticons in chat and private messages
 - Polls, Hangman, Profile, Tells, Night Club, TCs, and Anagrams
+- So many tiers that even the Original Showdown Boilerplate doesn't have, like Random Tiers and Local Metagames, as along with different forms of Monotype.
+- For staff members, you can use /shadowban to shadowban users and /permaban ( if & and above) to permaban a user from the server.
 - Economy (bucks system, shop, tournament winnings, lottery)
 - Lowdb and MySql database support
 
