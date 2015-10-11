@@ -4,20 +4,19 @@
 ********************************/
 
 var fs = require('fs');
+var serialize = require('node-serialize');
 var trainerCards = {};
 
-function loadTrainerCards () {
+function loadTrainerCards() {
 	try {
-		trainerCards = request.unrequest(fs.readFileSync('config/trainercards.json', 'utf8'));
+		trainerCards = serialize.unserialize(fs.readFileSync('config/trainercards.json', 'utf8'));
 		Object.merge(CommandParser.commands, trainerCards);
-	} catch (e) {}
+	} catch (e) {};
 }
-
-setTimeout(function load() {
-	loadTrainerCards();
-}, 1000);
+setTimeout(function(){loadTrainerCards();},1000);
 
 function saveTrainerCards() {
+	fs.writeFileSync('config/trainercards.json', serialize.serialize(trainerCards));
 	Object.merge(CommandParser.commands, trainerCards);
 }
 
@@ -85,9 +84,9 @@ exports.commands = {
 				this.privateModCommand("(" + user.name + " has enabled broadcasting trainer cards in this room.)");
 				break;
 
-			default:
 			case 'info':
 			case 'help':
+			default:
 				if (!this.canBroadcast()) return;
 				this.sendReplyBox(
 					"EZ-TC Commands:<br />" +
