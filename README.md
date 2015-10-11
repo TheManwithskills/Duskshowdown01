@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate)
 [![devDependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate/dev-status.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate#info=devDependencies)
 
-The Inferno Server is a Showdown Boilerplate (a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
+The Shadowfire Server is a Showdown Boilerplate (a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
 private servers).
 
 What is a boilerplate? Boilerplate is any text that is or can be reused in new
@@ -23,6 +23,7 @@ EOS, Frost, or Pandora has.
 - So many tiers that even the Original Showdown Boilerplate doesn't have, like Random Tiers and Local Metagames, as along with different forms of Monotype.
 - For staff members, you can use /shadowban to shadowban users and /permaban ( if & and above) to permaban a user from the server.
 - Economy (bucks system, shop, tournament winnings, lottery)
+- An area where leagues can hang out in. 
 - Lowdb and MySql database support
 
 ## Quick Start
