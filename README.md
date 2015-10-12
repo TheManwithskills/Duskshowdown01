@@ -29,7 +29,7 @@ EOS, Frost, or Pandora has.
 ## Quick Start
 
 ```bash
-$ git clone https://github.com/CreaturePhil/Showdown-Boilerplate.git
+$ git clone https://github.com/Charizardthefiremage/Shadowfire.git
 $ cd Showdown-Boilerplate && npm install
 $ node app.js
 ```
@@ -37,8 +37,7 @@ $ node app.js
 ## Maintainers
 
 This boilerplate is brought to you and maintained by the following people:
-
-[![Philip La](https://avatars3.githubusercontent.com/u/5875574?s=117)](http://creaturephil.github.io) | [![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
+[![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
 :---:|:---:|:---:|:---:|:---:
 
 ## License
