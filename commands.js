@@ -1630,38 +1630,12 @@ var commands = exports.commands = {
 		this.logEntry(user.name + " used /endemergency");
 	},
 
-	kill: function (target, room, user) {
-		if (!this.can('lockdown')) return false;
+	kill: function () {
+	        this.sendReply("If you need to restart the server, please ask Steelchar. Trying to restart this server without asking him is now forbidden to all admins.");
 
-		if (Rooms.global.lockdown !== true) {
-			return this.sendReply("For safety reasons, /kill can only be used during lockdown.");
-		}
+	
 
-		if (CommandParser.updateServerLock) {
-			return this.sendReply("Wait for /updateserver to finish before using /kill.");
-		}
-
-		for (var i in Sockets.workers) {
-			Sockets.workers[i].kill();
-		}
-
-		if (!room.destroyLog) {
-			process.exit();
-			return;
-		}
-		room.destroyLog(function () {
-			room.logEntry(user.name + " used /kill");
-		}, function () {
-			process.exit();
-		});
-
-		// Just in the case the above never terminates, kill the process
-		// after 10 seconds.
-		setTimeout(function () {
-			process.exit();
-		}, 10000);
-	},
-	killhelp: ["/kill - kills the server. Can't be done unless the server is in lockdown state. Requires: ~"],
+},
 
 	loadbanlist: function (target, room, user, connection) {
 		if (!this.can('hotpatch')) return false;
