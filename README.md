@@ -37,8 +37,10 @@ $ node app.js
 ## Maintainers
 
 This boilerplate is brought to you and maintained by the following people:
+
+
 [![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
-:---:|:---:|:---:|:---:|:---:
+
 
 ## License
 
