@@ -32,7 +32,7 @@ All credit goes to Creaturephil for the Showdown Boilerplate code.
 
 ```bash
 $ git clone https://github.com/Charizardthefiremage/Shadowfire.git
-$ cd Showdown-Boilerplate && npm install
+$ cd Shadowfire && npm install
 $ node app.js
 ```
 
