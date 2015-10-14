@@ -14,6 +14,8 @@ This repository contains the files needed to set up your own Pokémon Showdown
 server with all the amazing stuff that private Pokémon Showdown servers like
 EOS, Frost, or Pandora has.
 
+All credit goes to Creaturephil for the Showdown Boilerplate code. 
+
 
 ## Features
 
