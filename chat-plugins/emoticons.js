@@ -4,7 +4,10 @@ exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
-	'#Omegatroll': 'http://memeorama.com/wp-content/uploads/2012/04/troll-face-meme-.png',
+	'urmom': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
+	'facepalm': 'http://i.imgur.com/lv3GmpM.png',
+	'feelsemo': 'http://i.imgur.com/FPolh5d.jpg',
+	'feelsfdra': 'http://i.imgur.com/ZIcl9Zy.jpg',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
 	'feelsbm': 'http://i.imgur.com/xwfJb2z.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
