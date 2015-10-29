@@ -14,8 +14,9 @@ exports.commands = {
 		room.onUpdateIdentity(targetUser);
 		room.chatRoomData.founder = room.founder;
 		Rooms.global.writeChatRoomData();
-	},
-    
+	
+
+    },
     roomdefounder: 'deroomfounder',
     deroomfounder: function (target, room, user) {
         if (!room.auth) {
@@ -37,6 +38,72 @@ exports.commands = {
         if (room.chatRoomData) {
             Rooms.global.writeChatRoomData();
         }
+	},
+
+	roomauth: function (target, room, user, connection) {
+		if (!room.auth) return this.sendReply("/roomauth - This room isn't designed for per-room moderation and therefore has no auth list.");
+		var buffer = [];
+		var owners = [];
+		var mods = [];
+		var drivers = [];
+		var voices = [];
+		var founder = '';
+
+		room.owners = ''; room.admins = ''; room.leaders = ''; room.mods = ''; room.drivers = ''; room.voices = '';
+		for (var u in room.auth) {
+			if (room.auth[u] === '#') {
+				room.owners = room.owners + u + ',';
+			}
+			if (room.auth[u] === '@') {
+				room.mods = room.mods + u + ',';
+			}
+			if (room.auth[u] === '%') {
+				room.drivers = room.drivers + u + ',';
+			}
+			if (room.auth[u] === '+') {
+				room.voices = room.voices + u + ',';
+			}
+		}
+
+		if (room.founder) founder = '**Founder:** ' + room.founder + '\n\n';
+
+		room.owners = room.owners.split(',');
+		room.mods = room.mods.split(',');
+		room.drivers = room.drivers.split(',');
+		room.voices = room.voices.split(',');
+
+		for (var u in room.owners) {
+			if (room.owners[u] !== '') owners.push(room.owners[u]);
+		}
+
+		for (var u in room.mods) {
+			if (room.mods[u] !== '') mods.push(room.mods[u]);
+		}
+		for (var u in room.drivers) {
+			if (room.drivers[u] !== '') drivers.push(room.drivers[u]);
+		}
+		for (var u in room.voices) {
+			if (room.voices[u] !== '') voices.push(room.voices[u]);
+		}
+		if (owners.length > 0) {
+			owners = '**Owners:** ' + owners.join(', ') + '\n\n';
+		}
+		if (mods.length > 0) {
+			mods = '**Moderators:** ' + mods.join(', ') + '\n\n';
+		}
+		if (drivers.length > 0) {
+			drivers = '**Drivers:** ' + drivers.join(', ') + '\n\n';
+		}
+		if (voices.length > 0) {
+			voices = '**Voices:** ' + voices.join(', ') + '\n\n';
+		}
+
+		if (room.autorank === '#') owners = owners + 'Autorank is set to #.';
+		if (room.autorank === '@') mods = mods + 'Autorank is set to @.';
+		if (room.autorank === '%') drivers = drivers + 'Autorank is set to %.';
+		if (room.autorank === '+') voices = voices + 'Autorank is set to +.';
+
+		connection.popup(founder + owners + mods + drivers + voices);
 	},
 
 	roomowner: function (target, room, user) {
