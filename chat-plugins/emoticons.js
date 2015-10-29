@@ -4,7 +4,7 @@ exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
-	'#murica': 'http://i.imgur.com/d4XueEr.jpg'
+	'#murica': 'http://i.imgur.com/d4XueEr.jpg',
 	'#applejuice': 'http://i.imgur.com/s3TJfOB.jpg',
 	'urmom': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
 	'facepalm': 'http://i.imgur.com/lv3GmpM.png',
@@ -19,6 +19,7 @@ var emotes = {
 	'feelsgd': 'http://i.imgur.com/Jf0n4BL.png',
 	'feelsgn': 'http://i.imgur.com/juJQh0J.png',
 	'feelsjig': 'http://i.imgur.com/hSzqy5z.png',
+	'feelsbulba': 'http://i.imgur.com/PShsRD2.png',
 	'feelsshrk': 'http://i.imgur.com/amTG3jF.jpg',
 	'kappa': 'http://i.imgur.com/ZxRU4z3.png',
 	'feelsHigh': 'http://i.imgur.com/s9I2bxp.jpg',
@@ -39,10 +40,12 @@ var emotes = {
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
 	'noface': 'http://i.imgur.com/H744eRE.png',
+	'durp': 'http://i.imgur.com/2BloGXG.jpg',
 	'Obama': 'http://i.imgur.com/rBA9M7A.png',
 	'oshet': 'http://i.imgur.com/yr5DjuZ.png',
 	'Sanic': 'http://i.imgur.com/Y6etmna.png',
 	'wtfman': 'http://i.imgur.com/kwR8Re9.png',
+	'waitwat': 'http://i.imgur.com/FpxTQxU.jpg',
 	'xaa': 'http://i.imgur.com/V728AvL.png',
 	'yayface': 'http://i.imgur.com/anY1jf8.png',
 	'yesface': 'http://i.imgur.com/k9YCF6K.png'
