@@ -4,8 +4,11 @@ exports.parseEmoticons = parseEmoticons;
 
 var emotes = {
 	'#freewolf': 'http://i.imgur.com/ybxWXiG.png',
+	'#murica': 'http://i.imgur.com/d4XueEr.jpg'
+	'#applejuice': 'http://i.imgur.com/s3TJfOB.jpg',
 	'urmom': 'https://static-cdn.jtvnw.net/emoticons/v1/35218/1.0',
 	'facepalm': 'http://i.imgur.com/lv3GmpM.png',
+	'facepalm2': 'http://i.imgur.com/ylrqFwJ.png',
 	'feelsemo': 'http://i.imgur.com/FPolh5d.jpg',
 	'feelsfdra': 'http://i.imgur.com/ZIcl9Zy.jpg',
 	'feelsbd': 'http://i.imgur.com/YyEdmwX.png',
@@ -32,6 +35,7 @@ var emotes = {
 	'feelsrs': 'http://i.imgur.com/qGEot0R.png',
 	'feelssc': 'http://i.imgur.com/cm6oTZ1.png',
 	'fukya': 'http://i.imgur.com/ampqCZi.gif',
+	'fukno': 'http://i.imgur.com/QjQTx9W.png',
 	'funnylol': 'http://i.imgur.com/SlzCghq.png',
 	'hmmface': 'http://i.imgur.com/Z5lOwfZ.png',
 	'noface': 'http://i.imgur.com/H744eRE.png',
