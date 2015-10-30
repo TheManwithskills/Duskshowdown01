@@ -713,6 +713,14 @@ exports.Formats = [
 		banlist: ['Allow CAP']
 	},
 	{
+		name: "C&E",
+		section: "Other Metagames",
+
+		searchShow: false,
+		maxLevel: 100,
+		ruleset: ['Team Preview']
+	},
+	{
 		name: "Battle Factory",
 		section: "Other Metagames",
 
