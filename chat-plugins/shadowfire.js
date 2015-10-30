@@ -75,7 +75,6 @@ exports.commands = {
 		return this.logModCommand(user.name + " has revealed their auth symbol.");
 		this.sendReply("Your symbol has been reset.");
 	},
-	infernoroomauth: "roomauth",
 	roomauth: function(target, room, user, connection) {
 		if (!room.auth) return this.sendReply("/infernoroomauth - This room isn't designed for per-room moderation and therefore has no auth list.");
 		var buffer = [];
