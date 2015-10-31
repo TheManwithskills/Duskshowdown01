@@ -14,8 +14,9 @@ exports.commands = {
 		room.onUpdateIdentity(targetUser);
 		room.chatRoomData.founder = room.founder;
 		Rooms.global.writeChatRoomData();
-	},
-    
+	
+
+    },
     roomdefounder: 'deroomfounder',
     deroomfounder: function (target, room, user) {
         if (!room.auth) {
