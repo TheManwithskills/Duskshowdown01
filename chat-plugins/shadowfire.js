@@ -15,23 +15,6 @@ var badges = fs.createWriteStream('badges.txt', {
 	'flags': 'a'
 });
 exports.commands = {
-		restart: function(target, room, user) {
-		if (!this.can('lockdown')) return false;
-		try {
-			var forever = require('forever');
-		} catch (e) {
-			return this.sendReply("/restart requires the \"forever\" module.");
-		}
-		if (!Rooms.global.lockdown) {
-			return this.sendReply("For safety reasons, /restart can only be used during lockdown.");
-		}
-		if (CommandParser.updateServerLock) {
-			return this.sendReply("Wait for /updateserver to finish before using /restart.");
-		}
-		this.logModCommand(user.name + ' used /restart');
-		Rooms.global.send('|refresh|');
-		forever.restart('app.js');
-},
 	arlert: 'alert',	
 	alert: function(target, room, user) {
 		if (!this.can('declare')) return false;
@@ -90,80 +73,6 @@ exports.commands = {
 		this.sendReply("You have now revealed your auth symbol.");
 		return this.logModCommand(user.name + " has revealed their auth symbol.");
 		this.sendReply("Your symbol has been reset.");
-	},
-	roomauth: function(target, room, user, connection) {
-		if (!room.auth) return this.sendReply("/infernoroomauth - This room isn't designed for per-room moderation and therefore has no auth list.");
-		var buffer = [];
-		var owners = [];
-		var admins = [];
-		var leaders = [];
-		var mods = [];
-		var drivers = [];
-		var voices = [];
-		room.owners = '';
-		room.admins = '';
-		room.leaders = '';
-		room.mods = '';
-		room.drivers = '';
-		room.voices = '';
-		for (var u in room.auth) {
-			if (room.auth[u] == '#') {
-				room.owners = room.owners + u + ',';
-			}
-			if (room.auth[u] == '~') {
-				room.admins = room.admins + u + ',';
-			}
-			if (room.auth[u] == '&') {
-				room.leaders = room.leaders + u + ',';
-			}
-			if (room.auth[u] == '@') {
-				room.mods = room.mods + u + ',';
-			}
-			if (room.auth[u] == '%') {
-				room.drivers = room.drivers + u + ',';
-			}
-			if (room.auth[u] == '+') {
-				room.voices = room.voices + u + ',';
-			}
-		}
-		if (!room.founder) founder = '';
-		if (room.founder) founder = room.founder;
-		room.owners = room.owners.split(',');
-		room.mods = room.mods.split(',');
-		room.drivers = room.drivers.split(',');
-		room.voices = room.voices.split(',');
-		room.leaders = room.leaders.split(',');
-		for (var u in room.owners) {
-			if (room.owners[u] != '') owners.push(room.owners[u]);
-		}
-		for (var u in room.mods) {
-			if (room.mods[u] != '') mods.push(room.mods[u]);
-		}
-		for (var u in room.drivers) {
-			if (room.drivers[u] != '') drivers.push(room.drivers[u]);
-		}
-		for (var u in room.voices) {
-			if (room.voices[u] != '') voices.push(room.voices[u]);
-		}
-		for (var u in room.leaders) {
-			if (room.leaders[u] != '') leaders.push(room.leaders[u]);
-		}
-		if (owners.length > 0) {
-			owners = owners.join(', ');
-		}
-		if (mods.length > 0) {
-			mods = mods.join(', ');
-		}
-		if (leaders.length > 0) {
-			leaders = leaders.join(', ');
-		}
-		if (drivers.length > 0) {
-			drivers = drivers.join(', ');
-		}
-		if (voices.length > 0) {
-			voices = voices.join(', ');
-		}
-		connection.popup('Room Auth in "' + room.title + '"\n\n**Founder**:\n' + founder + '\n**Owner(s)**:\n' + owners + '\n**Leaders(s)**:\n' + leaders + '\n**Moderator(s)**:\n' + mods + '\n**Driver(s)**: \n' + drivers + '\n**Voice(s)**: \n' + voices);
 	},
 	pb: 'permaban',
 	pban: 'permaban',
