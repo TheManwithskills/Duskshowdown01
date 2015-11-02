@@ -102,6 +102,14 @@ exports.commands = {
 		var pban = fs.readFileSync('config/pbanlist.txt', 'utf8');
 		return user.send('|popup|' + pban);
 	},
+	dicehelp: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox(
+			'Dice game commands: <br />' + 
+			'/startdice <bet> - Starts a game.<br />' + 
+			'/joindice - Joins the game.<br />' + 
+			'/enddice - Forcibly ends the game.'
+	},
 	bitch: 'complain',
 	report: 'complain',
 	complain: function(target, room, user) {
