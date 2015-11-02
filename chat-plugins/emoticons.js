@@ -18,7 +18,7 @@ var emotes = {
 	'feelsky': 'http://i.imgur.com/BtATPId.png',
 	'udonsay': 'http://r32.imgfast.net/users/3215/23/26/64/smiles/280467785.jpg',
 	'feelslot': 'http://i.imgur.com/tl88F7i.png',
-	'feelsfuku': 'http://i.imgur.com/m018Q4S.jpg','
+	'feelsfuku': 'http://i.imgur.com/m018Q4S.jpg',
 	'feelsarbk': 'http://i.imgur.com/HqyjN7G.png',
 	'feelsbn': 'http://i.imgur.com/wp51rIg.png',
 	'feelsdd': 'http://i.imgur.com/fXtdLtV.png',
