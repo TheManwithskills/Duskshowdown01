@@ -539,6 +539,14 @@ exports.commands = {
 			this.sendReplyBox("The current jackpot is " + pot + currencyName(pot) + ".");
 		}.bind(this));
 	},
+	dicehelp: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox(
+			'Dice game commands: <br />' + 
+			'/startdice <bet> - Starts a game.<br />' + 
+			'/joindice - Joins the game.<br />' + 
+			'/enddice - Forcibly ends the game.'
+	},
 
 	bucks: 'economystats',
 	economystats: function (target, room, user) {
