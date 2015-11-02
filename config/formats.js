@@ -1527,7 +1527,7 @@ exports.Formats = [
 		
 		mod: 'Pokebilities',
 		ruleset: ['OU'],
-		banlist: ['Uber', 'Soul Dew']
+		banlist: []
 	}
 	{
 		name: "VGC 2010",
