@@ -355,6 +355,87 @@
 	margin:-3px
   }
   
+  .pm-window h3 {
+    border-color: #3399FF;
+    background: rgb(51, 204, 255) url("") bottom right no-repeat;
+    background-position: 200px;
+    color:  #3399FF;
+    text-shadow: 0px -1px 0px #3399FF;
+  }
+  
+  .pm-window h3:hover {
+    background: rgb(51, 204, 255) url("") bottom right no-repeat;
+    background-position: 200px;
+    color: #3399FF;
+  }
+  
+  .pm-window h3 small {
+    color: #3399FF;
+  }
+  
+  .pm-window.focused h3, .pm-window.focused h3:hover {
+    border-color: #3399FF;
+    background: rgb(51, 204, 255) url("") bottom right no-repeat;
+    background-position: 200px;
+    color: #3399FF;
+    text-shadow: 0px -1px 0px #0066FF;
+  }
+  
+  .pm-window h3:hover .minimizebutton, .pm-window h3 .closebutton, .pm-window h3 .minimizebutton {
+    color:  #CCFFFF;
+  }
+  
+  .pm-window h3 .closebutton:hover {
+    color:#CCFFFF;
+  }
+  
+  .pm-window h3 .minimizebutton:hover {
+    color: #CCFFFF;
+  }
+  
+  .pm-window h3 .closebutton:hover + .minimizebutton {
+    color: #CCFFFF !important;
+  }
+  
+  .message-pm {
+    color:  #000000;
+  }
+  
+  .pm-window h3.pm-notifying {
+    border-color: #0099FF;
+    background: #00FFFF;
+    color: #0099FF;
+    text-shadow: none;
+  }
+  
+  .pm-window h3.pm-notifying:hover {
+    background: #CCFFFF;
+  }
+  
+  .pm-window h3.pm-notifying small {
+    color:  #000000;
+  }
+  
+  .pm-window h3.pm-notifying .closebutton, .pm-window h3.pm-notifying .minimizebutton {
+    color:#000000;
+  }
+  
+  .pm-window h3.pm-notifying .closebutton:hover {
+    color: #000000;
+  }
+  
+  .pm-window h3.pm-notifying .minimizebutton:hover {
+    color: #000000;
+  }
+  
+  .pm-window h3.pm-notifying .closebutton:hover + .minimizebutton {
+    color: #000000 !important;
+  }
+  
+  .pm-log, .pm-window.focused .pm-log {
+    border-color: #000000;
+  }
+                    
   
   #lobby-userlist-user-steelchar, #staff-userlist-user-steelchar, #tournaments-userlist-user-steelchar, #femalehq-userlist-user-steelchar, #shadowbanroom-userlist-user-steelchar {
                 background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokecons_action/006.gif") right no-repeat;
@@ -438,4 +519,13 @@
 
   #lobby-userlist-user-knightchar, #staff-userlist-user-knightchar, #shadowbanroom-userlist-user-knightchar, #tournaments-userlist-user-knightchar, #roleplaying-userlist-user-knightchar, #casino-userlist-user-knightchar, #shadowleague-userlist-user-knightchar { 
     background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokecons_action/448.gif") right no-repeat;
+  }
+
+
+  #lobby-userlist-user-natm, #staff-userlist-user-natm, #shadowbanroom-userlist-user-natm { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/359-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-clawliet, #littlecup-userlist-user-clawliet, #theartbotshop-userlist-user-clawliet { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
   }
