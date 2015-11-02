@@ -1,7 +1,7 @@
 // The server port - the port to run Pokemon Showdown under
 exports.port = 8000;
 exports.serverid = 'shadowfire';
-exports.servertoken = 'B02yKh6+whyv';
+exports.servertoken = 'EdyfksZgtSw1';
 // proxyip - proxy IPs with trusted X-Forwarded-For headers
 //   This can be either false (meaning not to trust any proxies) or an array
 //   of strings. Each string should be either an IP address or a subnet given
