@@ -1528,7 +1528,7 @@ exports.Formats = [
 		mod: 'Pokebilities',
 		ruleset: ['OU'],
 		banlist: []
-	}
+	},
 	{
 		name: "VGC 2010",
 		section: "Local Metagames",
