@@ -130,15 +130,16 @@ var commands = exports.commands = {
 			this.sendReply("You forgot the comma.");
 			return this.parse('/help msg');
 		}
+		this.pmTarget = (targetUser || this.targetUsername);
 		if (!targetUser || !targetUser.connected) {
 			if (targetUser && !targetUser.connected) {
-				this.popupReply("User " + this.targetUsername + " is offline.");
-			} else if (!target) {
-				this.popupReply("User " + this.targetUsername + " not found. Did you forget a comma?");
+				this.errorReply("User " + this.targetUsername + " is offline. Try using /tell to send them an offline message.");
+				return;
 			} else {
-				this.popupReply("User "  + this.targetUsername + " not found. Did you misspell their name?");
+				this.errorReply("User "  + this.targetUsername + " not found. Did you misspell their name? If they are offline, try using /tell to send them an offline message.");
+				return this.parse('/help tell');
 			}
-			return this.parse('/help msg');
+			return;
 		}
 
 		if (Config.pmmodchat) {
