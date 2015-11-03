@@ -109,6 +109,8 @@ exports.commands = {
 			'/startdice <bet> - Starts a game.<br />' + 
 			'/joindice - Joins the game.<br />' + 
 			'/enddice - Forcibly ends the game.'
+			
+		);
 	},
 	bitch: 'complain',
 	report: 'complain',
