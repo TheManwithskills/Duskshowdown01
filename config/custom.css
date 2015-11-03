@@ -131,7 +131,7 @@
  
   .header {
     height: 50px;
-    background: rgba(178, 223, 247, 0.85) url("http://i.imgur.com/WpN5j9I.png") no-repeat;
+    background: rgba(178, 223, 247, 0.85) url("http://images.cooltext.com/4474861.png") no-repeat bottom left;
     }
  
   .header .logo {
@@ -528,4 +528,16 @@
 
   #lobby-userlist-user-clawliet, #littlecup-userlist-user-clawliet, #theartbotshop-userlist-user-clawliet { 
     background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/446.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-ggdaca, #staff-userlist-user-ggdaca, #shadowbanroom-userlist-user-ggdaca { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/257-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-firestatics, #staff-userlist-user-firestatics, #hydrocity-userlist-user-firestatics { 
+    background: rgba(244, 244, 244, 0.8) url("http://www.pokestadium.com/sprites/xy/charizard-3.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-firestatics, #staff-userlist-user-firestatics, #shadowbanroom-userlist-user-firestatics { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokecons_action/006.gif") right no-repeat;
   }
