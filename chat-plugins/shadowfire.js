@@ -109,6 +109,8 @@ exports.commands = {
 			'/startdice <bet> - Starts a game.<br />' + 
 			'/joindice - Joins the game.<br />' + 
 			'/enddice - Forcibly ends the game.'
+			
+		);
 	},
 	bitch: 'complain',
 	report: 'complain',
@@ -340,39 +342,6 @@ exports.commands = {
 			}
 			self.sendReplyBox(Tools.escapeHTML(data));
 		});
-	},
-	cs: 'customsymbol',
-	customsymbol: function(target, room, user) {
-		if (!user.canCustomSymbol && !Gold.hasBadge(user.userid, 'vip')) return this.sendReply('You don\'t have the permission to use this command.');
-		//var free = true;
-		if (user.hasCustomSymbol) return this.sendReply('You currently have a custom symbol, use /resetsymbol if you would like to use this command again.');
-		if (!this.canTalk()) return;
-		//if (!free) return this.sendReply('Sorry, we\'re not currently giving away FREE custom symbols at the moment.');
-		if (!target || target.length > 1) return this.sendReply('/customsymbol [symbol] - changes your symbol (usergroup) to the specified symbol. The symbol can only be one character');
-		var bannedSymbols = /[ +<>$%‽!★@&~#卐|A-z0-9]/;
-		if (target.match(bannedSymbols)) return this.sendReply('Sorry, but you cannot change your symbol to this for safety/stability reasons.');
-		user.getIdentity = function() {
-			if (this.muted) return '!' + this.name;
-			if (this.locked) return '‽' + this.name;
-			return target + this.name;
-		};
-		user.updateIdentity();
-		user.canCustomSymbol = false;
-		user.hasCustomSymbol = true;
-		return this.sendReply("Your symbol has been set.");
-	},
-	rs: 'resetsymbol',
-	resetsymbol: function(target, room, user) {
-		if (!user.hasCustomSymbol) return this.sendReply('You don\'t have a custom symbol!');
-		user.getIdentity = function() {
-			if (this.muted) return '!' + this.name;
-			if (this.locked) return '‽' + this.name;
-			return this.group + this.name;
-		};
-		user.hasCustomSymbol = false;
-		delete user.getIdentity;
-		user.updateIdentity();
-		this.sendReply('Your symbol has been reset.');
 	},
 	helixfossil: 'm8b',
 	helix: 'm8b',
