@@ -882,12 +882,6 @@ exports.Formats = [
 		}
 	},
 	{
-		name: "Ability Exchange",
-		section: "Other Metagames",
-
-		ruleset: ['Pokemon', 'HP Percentage Mod']
-	},
-	{
 		name: "Perseverance",
 		section: "Other Metagames",
 
@@ -1322,7 +1316,6 @@ exports.Formats = [
 		name: "Random Inverse Battle",
 		section: "Random Metagames",
 
-		searchShow: false,
 		team: 'random',
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Sleep Clause Mod', 'Cancel Mod'],
 		onNegateImmunity: function (pokemon, type) {
@@ -1755,5 +1748,48 @@ exports.Formats = [
 		searchShow: false,
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	
+	// Mixed Metagames!
+	///////////////////////////////////////////////////////////////////
+	
+	{
+		name: "Almost Any Inverse Battle",
+		section: "Mixed Metagames",
+		column: 4,
+		
+		mod
+		ruleset: ['Pokemon', 'Standard', 'Ability Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Diggersby', 'Giratina-Origin', 'Groudon',
+			'Ho-Oh', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Serperior',
+			'Shaymin-Sky', 'Snorlax', 'Xerneas', 'Yveltal', 'Zekrom', 'Gengarite', 'Kangaskhanite', 'Salamencite', 'Soul Dew'
+		],
+		banlist: ['Ignore Illegal Abilities',
+			'Arceus', 'Archeops', 'Bisharp', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon',
+			'Ho-Oh', 'Hoopa-Unbound', 'Keldeo', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Mamoswine', 'Mewtwo', 'Palkia',
+			'Rayquaza', 'Regigigas', 'Reshiram', 'Shedinja', 'Slaking', 'Smeargle', 'Terrakion', 'Weavile', 'Xerneas', 'Yveltal',
+			'Zekrom',
+			'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew', 'Chatter'
+		],
+		onValidateSet: function (set) {
+			var bannedAbilities = {'Aerilate': 1, 'Arena Trap': 1, 'Contrary': 1, 'Fur Coat': 1, 'Huge Power': 1, 'Imposter': 1, 'Parental Bond': 1, 'Protean': 1, 'Pure Power': 1, 'Shadow Tag': 1, 'Simple':1, 'Speed Boost': 1, 'Wonder Guard': 1};
+			if (set.ability in bannedAbilities) {
+				var template = this.getTemplate(set.species || set.name);
+				var legalAbility = false;
+				for (var i in template.abilities) {
+					if (set.ability === template.abilities[i]) legalAbility = true;
+				}
+				if (!legalAbility) return ['The ability ' + set.ability + ' is banned on Pok\u00e9mon that do not naturally have it.'];
+			}
+		}
+		onNegateImmunity: function (pokemon, type) {
+			if (type in this.data.TypeChart && this.runEvent('Immunity', pokemon, null, null, type)) return false;
+		},
+		onEffectiveness: function (typeMod, target, type, move) {
+			// The effectiveness of Freeze Dry on Water isn't reverted
+			if (move && move.id === 'freezedry' && type === 'Water') return;
+			if (move && !this.getImmunity(move, type)) return 1;
+			return -typeMod;
+		}
 	}
 ];
