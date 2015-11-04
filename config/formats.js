@@ -882,12 +882,6 @@ exports.Formats = [
 		}
 	},
 	{
-		name: "Ability Exchange",
-		section: "Other Metagames",
-
-		ruleset: ['Pokemon', 'HP Percentage Mod']
-	},
-	{
 		name: "Perseverance",
 		section: "Other Metagames",
 
@@ -1322,7 +1316,6 @@ exports.Formats = [
 		name: "Random Inverse Battle",
 		section: "Random Metagames",
 
-		searchShow: false,
 		team: 'random',
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Sleep Clause Mod', 'Cancel Mod'],
 		onNegateImmunity: function (pokemon, type) {
@@ -1755,5 +1748,82 @@ exports.Formats = [
 		searchShow: false,
 		debug: true,
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
+	},
+	
+	// Mixed Metagames!
+	///////////////////////////////////////////////////////////////////
+	
+	{
+		name: "Almost Any Inverse Battle",
+		section: "Mixed Metagames!",
+		column: 4,
+		
+		ruleset: ['Pokemon', 'Standard', 'Ability Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
+		banlist: ['Ignore Illegal Abilities',
+			'Arceus', 'Archeops', 'Bisharp', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon',
+			'Ho-Oh', 'Hoopa-Unbound', 'Keldeo', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Mamoswine', 'Mewtwo', 'Palkia',
+			'Rayquaza', 'Regigigas', 'Reshiram', 'Shedinja', 'Slaking', 'Smeargle', 'Terrakion', 'Weavile', 'Xerneas', 'Yveltal',
+			'Zekrom',
+			'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew', 'Chatter'],
+		onValidateSet: function (set) {
+			var bannedAbilities = {'Aerilate': 1, 'Arena Trap': 1, 'Contrary': 1, 'Fur Coat': 1, 'Huge Power': 1, 'Imposter': 1, 'Parental Bond': 1, 'Protean': 1, 'Pure Power': 1, 'Shadow Tag': 1, 'Simple':1, 'Speed Boost': 1, 'Wonder Guard': 1};
+			if (set.ability in bannedAbilities) {
+				var template = this.getTemplate(set.species || set.name);
+				var legalAbility = false;
+				for (var i in template.abilities) {
+					if (set.ability === template.abilities[i]) legalAbility = true;
+				}
+				if (!legalAbility) return ['The ability ' + set.ability + ' is banned on Pok\u00e9mon that do not naturally have it.'];
+			}
+		},
+		onNegateImmunity: function (pokemon, type) {
+			if (type in this.data.TypeChart && this.runEvent('Immunity', pokemon, null, null, type)) return false;
+		},
+		onEffectiveness: function (typeMod, target, type, move) {
+			// The effectiveness of Freeze Dry on Water isn't reverted
+			if (move && move.id === 'freezedry' && type === 'Water') return;
+			if (move && !this.getImmunity(move, type)) return 1;
+			return -typeMod;
+		}
+	},
+	{
+		name: "Almost Any Duotype",
+		section: "Mixed Metagames!",
+		
+		ruleset: ['Pokemon', 'Standard', 'Ability Clause', 'Baton Pass Clause', 'Swagger Clause', 'Duo Type Clause', 'Team Preview'],
+		banlist: ['Ignore Illegal Abilities',
+			'Aegislash', 'Arceus', 'Archeops', 'Bisharp', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon',
+			'Ho-Oh', 'Hoopa-Unbound', 'Keldeo', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Mamoswine', 'Mewtwo', 'Palkia',
+			'Rayquaza', 'Regigigas', 'Reshiram', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Smeargle', 'Talonflame', 'Terrakion', 'Weavile', 'Xerneas', 'Yveltal',
+			'Zekrom',
+			'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Slowbronite', 'Damp Rock', 'Soul Dew', 'Chatter', 'Double Team', 'Minimize', 'Swagger'],
+		onValidateSet: function (set) {
+			var bannedAbilities = {'Aerilate': 1, 'Arena Trap': 1, 'Contrary': 1, 'Fur Coat': 1, 'Huge Power': 1, 'Imposter': 1, 'Parental Bond': 1, 'Protean': 1, 'Pure Power': 1, 'Shadow Tag': 1, 'Simple':1, 'Speed Boost': 1, 'Wonder Guard': 1};
+			if (set.ability in bannedAbilities) {
+				var template = this.getTemplate(set.species || set.name);
+				var legalAbility = false;
+				for (var i in template.abilities) {
+					if (set.ability === template.abilities[i]) legalAbility = true;
+				}
+				if (!legalAbility) return ['The ability ' + set.ability + ' is banned on Pok\u00e9mon that do not naturally have it.'];
+			}
+		}
+	},
+	{
+		name: "Tier Shift Sketchmons",
+		section: "Mixed Metagames!",
+		
+		mod: 'tiershift',
+		ruleset: ['OU'],
+		banlist: ['Allow One Sketch', "King's Rock", 'Pinsirite', 'Razor Fang', 'Shadow Tag', 'Chatter'],
+		onValidateTeam: function (team) {
+			var sketchedMoves = {};
+			for (var i = 0; i < team.length; i++) {
+				var move = team[i].sketchmonsMove;
+				if (!move) continue;
+				if (move in sketchedMoves) return ["You are limited to sketching one of each move by Move Clause.", "(You have sketched " + this.getMove(move).name + " more than once)"];
+				sketchedMoves[move] = (team[i].name || team[i].species);
+			}
+		}
 	}
 ];
