@@ -541,3 +541,27 @@
   #lobby-userlist-user-firestatics, #staff-userlist-user-firestatics, #shadowbanroom-userlist-user-firestatics { 
     background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokecons_action/006.gif") right no-repeat;
   }
+
+  #a-userlist-user-darkero, #a-userlist-user-darkero, #a-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("aa.jpg") right no-repeat;
+  }
+
+  #lobby-userlist-user-darkero, #staff-userlist-user-darkero, #sociedadedivina-userlist-user-darkero, #tournaments-userlist-user-darkero, #shadowbanroom-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/491.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-darkero, #staff-userlist-user-darkero, #shadowbanroom-userlist-user-darkero, #sociedadedivina-userlist-user-darkero, #tournaments-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokemon/gen4/overworld/shiny_frontf2/491.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-darkero, #staff-userlist-user-darkero, #shadowbanroom-userlist-user-darkero, #sociedadedivina-userlist-user-darkero, #tournaments-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokemon/gen4/overworld/frontf2/493.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-darkero, #staff-userlist-user-darkero, #shadowbanroom-userlist-user-darkero, #sociedadedivina-userlist-user-darkero, #tournaments-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokemon/gen4/overworld/shiny_frontf2/144.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-dracostatics { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/493.gif") right no-repeat;
+  }
