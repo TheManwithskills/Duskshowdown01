@@ -1,22 +1,23 @@
 exports.commands = {
-	roomfounder: function (target, room, user) {
-		if (!room.chatRoomData) {
-			return this.sendReply("/roomfounder - This room isn't designed for per-room moderation to be added.");
-		}
-		target = this.splitTarget(target, true);
-		var targetUser = this.targetUser;
-		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
-		if (!this.can('makeroom')) return false;
-		if (!room.auth) room.auth = room.chatRoomData.auth = {};
-		room.auth[targetUser.userid] = '#';
-		room.founder = targetUser.userid;
-		this.addModCommand(targetUser.name + ' was appointed to Room Founder by ' + user.name + '.');
-		room.onUpdateIdentity(targetUser);
-		room.chatRoomData.founder = room.founder;
-		Rooms.global.writeChatRoomData();
-	
-
+    roomfounder: function (target, room, user) {
+        if (!room.chatRoomData) {
+            return this.sendReply("/roomfounder - This room isn\'t designed for per-room moderation to be added.");
+        }
+        target = this.splitTarget(target, true);
+        var targetUser = this.targetUser;
+        if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
+        if (!this.can('makeroom')) return false;
+        if (!room.auth) room.auth = room.chatRoomData.auth = {};
+        if (!room.leagueauth) room.leagueauth = room.chatRoomData.leagueauth = {};
+        var name = targetUser.name;
+        room.auth[targetUser.userid] = '#';
+        room.founder = targetUser.userid;
+        this.addModCommand(name + ' was appointed to Room Founder by ' + user.name + '.');
+        room.onUpdateIdentity(targetUser);
+        room.chatRoomData.founder = room.founder;
+        Rooms.global.writeChatRoomData();
     },
+
     roomdefounder: 'deroomfounder',
     deroomfounder: function (target, room, user) {
         if (!room.auth) {
