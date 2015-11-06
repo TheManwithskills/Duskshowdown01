@@ -470,6 +470,11 @@
 
   }
   
+  #lobby-userlist-user-vintro, #staff-userlist-user-vintro, #shadowbanroom-userlist-user-vintro {
+  	background: rgba(244, 244, 244, 0.8) url(http://orig14.deviantart.net/c6c3/f/2015/254/c/e/mega_scizor_icon_by_commander_f-d9963qx.gif) right no-repeat;
+  	
+  }
+  
   #lobby-userlist-user-vvva, #staff-userlist-user-vvva, #shadowbanroom-userlist-user-vvva, #casino-userlist-user-vvva {
         background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokecons_action/491.gif") right no-repeat;
 

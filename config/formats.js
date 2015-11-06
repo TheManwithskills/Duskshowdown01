@@ -1041,7 +1041,6 @@ exports.Formats = [
 		],
 		section: "Other Metagames",
 
-		searchShow: false,
 		mod: 'averagemons',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Sableye + Prankster', 'Shedinja', 'Smeargle', 'Venomoth',
@@ -1057,7 +1056,6 @@ exports.Formats = [
 		],
 		section: "Other Metagames",
 
-		searchShow: false,
 		mod: 'hiddentype',
 		ruleset: ['OU']
 	},
@@ -1332,7 +1330,6 @@ exports.Formats = [
 		name: "Random Haxmons",
 		section: "Random Metagames",
 
-		searchShow: false,
 		team: 'random',
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Sleep Clause Mod', 'Freeze Clause', 'Cancel Mod'],
 		onModifyMovePriority: -100,
@@ -1825,5 +1822,16 @@ exports.Formats = [
 				sketchedMoves[move] = (team[i].name || team[i].species);
 			}
 		}
+	},
+	{
+		name: "Hidden MonoType",
+		desc: ["A mix of Hidden Type and Monotype. Midden power type might not count towards the team type."],
+		section: "Mixed Metagames!",
+
+		mod: 'hiddentype',
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Same Type Clause', 'Team Preview'],
+		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh',
+			'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Talonflame', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew']
 	}
 ];
