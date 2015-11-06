@@ -1,9 +1,5 @@
 # Shadowfire Server
 
-[![Build Status](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate.svg)](https://travis-ci.org/CreaturePhil/Showdown-Boilerplate)
-[![Dependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate)
-[![devDependency Status](https://david-dm.org/CreaturePhil/Showdown-Boilerplate/dev-status.svg)](https://david-dm.org/CreaturePhil/Showdown-Boilerplate#info=devDependencies)
-
 The Shadowfire Server is a Showdown Boilerplate (a template for [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown)
 private servers).
 
@@ -41,9 +37,7 @@ $ node app.js
 This boilerplate is brought to you and maintained by the following people:
 
 
-[![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
-
-[![Vintro](https://avatars3.githubusercontent.com/u/15351297?v=3&s=400)](https://github.com/vintro)
+[![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)                    [![Vintro](https://avatars3.githubusercontent.com/u/15351297?v=3&s=400)](https://github.com/vintro)
 
 
 ## License

@@ -1,4 +1,3 @@
-var sqlite3 = require('sqlite3');
 var fs = require('fs');
 var http = require('http');
 var MD5 = require('MD5');
@@ -73,7 +72,7 @@ exports.commands = {
 				profile += '&nbsp;<font color=#24678d><b>Name: </font><b><font color="' + hashColor(toId(username)) + '">' + Tools.escapeHTML(username) + '</font></b><br />';
 				profile += '&nbsp;<font color=#24678d><b>Registered: </font></b>' + regdate + '<br />';
 				if (!Users.vips[userid]) profile += '&nbsp;<font color=#24678d><b>Rank: </font></b>' + userGroup + '<br />';
-				if (Users.vips[userid]) profile += '&nbsp;<font color=#24568d><b>Rank: </font></b>' + userGroup + ' (<font color=#FF9933><b>Shadowfire DEV</b></font>)<br />';
+				if (Users.vips[userid]) profile += '&nbsp;<font color=#24568d><b>Rank: </font></b>' + userGroup + ' (<font color=#00CCFF><b>Shadowfire DEV</b></font>)<br />';
 				//if (online) profile += '&nbsp;<font color=#24678d><b>Last Online: </font></b><font color=green>Currently Online</font><br />';
 				//if (!online) profile += '&nbsp;<font color=#24678d><b>Last Online: </font></b>' + lastOnline + '<br />';
 				profile += '<br clear="all">';
@@ -82,6 +81,34 @@ exports.commands = {
 			}
 		
 	},
+
+	vipsymbol: function(target, room, user) {
+	 	var bannedSymbols = ['!', '|', '?', '\u2030', '\u534D', '\u5350', '\u223C'];
+	 	for (var u in Config.groups) if (Config.groups[u].symbol) bannedSymbols.push(Config.groups[u].symbol);
+	 	if(!user.can('vip')) return this.sendReply('You need to buy this item from the shop to use.');
+	 	if(!target || target.length > 1) return this.sendReply('/vipsymbol [symbol] - changes your symbol (usergroup) to the specified symbol. The symbol can only be one character. Rank needed to use this: Shadowfire DEV');
+	 	if (target.match(/([a-zA-Z ^0-9])/g) || bannedSymbols.indexOf(target) >= 0) {
+	 		return this.sendReply('This symbol is banned.');
+	 	}
+	 	user.getIdentity = function (roomid) {
+			if (!roomid) roomid = 'lobby';
+			if (this.locked) {
+				return '?'+this.name;
+			}
+			if (roomid) {
+				var room = Rooms.rooms[roomid];
+				if (room.isMuted(this)) {
+					return '!' + this.name;
+				}
+			}
+		return target + this.name;
+		}
+	 	user.updateIdentity();
+	 	user.canCustomSymbol = false;
+	 	user.hasCustomSymbol = true;
+	 	this.sendReply('Your symbol is now ' + target + '. It will be saved until you log off for more than an hour, or the server restarts. You can remove it with /resetsymbol and /showauth');
+
+},
 
 	economycode: function (target, room, user) {
 		if (!this.canBroadcast()) return;

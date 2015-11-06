@@ -14,10 +14,10 @@ function saveVips() {
 }
 
 exports.commands = {
-	givesfdev: function (target, room, user) {
+	givedev: function (target, room, user) {
 		if (!this.can('givevip')) return false;
-		if (!target) return this.sendReply("Usage: /givesfdev [user]");
-		if (Users.vips[toId(target)]) return this.sendReply(target + " already has SF DEV.");
+		if (!target) return this.sendReply("Usage: /givedev [user]");
+		if (Users.vips[toId(target)]) return this.sendReply(target + " already has the status.");
 		var targetUser = Users(target);
 
 		if (!targetUser) return this.sendReply("User \"" + target + "\" not found.");
@@ -30,9 +30,9 @@ exports.commands = {
 		saveVips();
 	},
 
-	takesfdev: function (target, room, user) {
+	takedev: function (target, room, user) {
 		if (!this.can('givevip')) return false;
-		if (!target) return this.sendReply("Usage: /takesfdev [user]");
+		if (!target) return this.sendReply("Usage: /takedev [user]");
 		if (!Users.vips[toId(target)]) return this.sendReply("User \"" + target + "\" is not a Shadowfire DEV.");
 
 		delete Users.vips[toId(target)];
