@@ -41,9 +41,7 @@ $ node app.js
 This boilerplate is brought to you and maintained by the following people:
 
 
-[![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage)
-
-[![Vintro](https://avatars3.githubusercontent.com/u/15351297?v=3&s=400)](https://github.com/vintro)
+[![Charizardthefiremage](https://avatars1.githubusercontent.com/u/14117114?v=3&s=96)](https://github.com/charizardthefiremage) [![Vintro](https://avatars3.githubusercontent.com/u/15351297?v=3&s=400)](https://github.com/vintro)
 
 
 ## License
