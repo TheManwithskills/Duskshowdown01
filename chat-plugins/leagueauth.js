@@ -55,7 +55,7 @@ var Groups = {
 exports.commands = {
         leaguedeauth: 'leaguepromote',
         roomtrainer: 'leaguepromote',
-        roomgleader: 'leaguepromote',
+        roomgmleader: 'leaguepromote',
         roomfrontier: 'leaguepromote',
         roombrain: 'leaguepromote',
         roomace: 'leaguepromote',
@@ -88,7 +88,7 @@ exports.commands = {
                
                 if (cmd==='roomtrainer') {
                         nextGroup = Groupsranking[1];
-                } else if (cmd==='roomgleader') {
+                } else if (cmd==='roomgmleader') {
                         nextGroup = Groupsranking[2];
                 } else if (cmd==='roomfrontier') {
                         nextGroup = Groupsranking[3];                
