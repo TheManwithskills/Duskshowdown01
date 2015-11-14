@@ -4,10 +4,10 @@
   **************/
  
   body {
-    background: #EEE url("http://orig08.deviantart.net/46b5/f/2014/159/3/b/mega_charizard_x_wallpaper_3_by_glench-d7liatl.png") no-repeat left top;
+    background: #EEE url("http://i.imgur.com/yF3T8Li.png") no-repeat left top;
   }
 
- .button{background:#0099CC!important;border:solid 1px black!important;}
+ .button{background:#003399!important;border:solid 1px black!important;}
 
 
 .menugroup .select:hover, .menugroup .button:hover {
@@ -446,6 +446,15 @@
 
 
 
-  #lobby-userlist-user-knightchar, #staff-userlist-user-knightchar, #shadowbanroom-userlist-user-knightchar, #tournaments-userlist-user-knightchar, #casino-userlist-user-knightchar, #theartbotshop-userlist-user-knightchar, #roleplaying-userlist-user-knightchar, #ubers-userlist-user-knightchar, #ou-userlist-user-knightchar { 
+
+  #lobby-userlist-user-knightchar, #staff-userlist-user-knightchar, #shadowbanroom-userlist-user-knightchar, #casino-userlist-user-knightchar, #tournaments-userlist-user-knightchar, #theartbotshop-userlist-user-knightchar, #femalehq-userlist-user-knightchar, #roleplaying-userlist-user-knightchar { 
     background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/006-mega-x.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-natm, #staff-userlist-user-natm, #shadowbanroom-userlist-user-natm, #casino-userlist-user-natm, #tournaments-userlist-user-natm, #theartbotshop-userlist-user-natm, #femalehq-userlist-user-natm, #roleplaying-userlist-user-natm { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/303-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-ashyudhajit, #casino-userlist-user-ashyudhajit, #femalehq-userlist-user-ashyudhajit { 
+    background: rgba(244, 244, 244, 0.8) url("https://lh5.googleusercontent.com/proxy/ro4tCC3hCK0CDO7R_QBEtQAlZs_QG7ZAmjarEnJb7-xSjr1kTvjsy7gEMehkUNSlx3Vjb4cFzy29AYrnNs_0NStZnWO8vEHmrel-iMciP3Lfr6HNwRim1J7wemtgyEyW1Kx-xTXOycVClPX_TS5vbBylkw_XS15rTrY=w38-h25-nc") right no-repeat;
   }
