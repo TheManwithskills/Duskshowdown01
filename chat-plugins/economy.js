@@ -2,14 +2,14 @@ var fs = require('fs');
 var path = require('path');
 
 var shop = [
-	['Ticket', 'Buys a lottery ticket for a chance to win big money.', 5],
+	['Fix', 'Buys the ability to alter your current custom avatar or trainer card. (don\'t buy if you have neither)', 5],
+	['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 5],
 	['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
-	['Fix', 'Buys the ability to alter your current custom avatar or trainer card. (don\'t buy if you have neither)', 10],
-	['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)', 20],
-	['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 25],
-	['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 40],
-	['Staff Help', 'Staff member will help set up roomintros and anything else needed in a room. Response may not be immediate.', 50],
-	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 100]
+	['Ticket', 'Buys a lottery ticket for a chance to win big money.', 5],
+	['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)', 10],
+	['Trainer Card', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 20],
+	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 25],
+	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 100]
 ];
 
 var shopDisplay = getShopDisplay(shop);
@@ -26,7 +26,7 @@ var shopDisplay = getShopDisplay(shop);
  * @returns {String}
  */
 function currencyName(amount) {
-	var name = " buck";
+	var name = " SF Buck";
 	return amount === 1 ? name : name + "s";
 }
 
@@ -64,7 +64,7 @@ function logMoney(message) {
  * @return {String} display
  */
 function getShopDisplay(shop) {
-	var display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
+	var display = "<center><b>Shadowfire Shop</b></center><table border='15' cellspacing='13' cellpadding='12' width='100%'>" +
 					"<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
 	var start = 0;
 	while (start < shop.length) {
@@ -221,7 +221,7 @@ exports.commands = {
 				if (err) throw err;
 				amount = amount + currencyName(amount);
 				total = total + currencyName(total);
-				_this.sendReply(username + " losted " + amount + ". " + username + " now has " + total + ".");
+				_this.sendReply(username + " lost " + amount + ". " + username + " now has " + total + ".");
 				if (Users.get(username)) Users.get(username).popup(user.name + " has taken " + amount + " from you. You now have " + total + ".");
 				logMoney(username + " had " + amount + " taken away by " + user.name + ".");
 			});
@@ -278,10 +278,33 @@ exports.commands = {
 	},
 	transfermoneyhelp: ["/transfer [user], [amount] - Transfer a certain amount of money to a user."],
 
-	store: 'shop',
-	shop: function (target, room, user) {
+
+    	shop: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		return this.sendReply("|raw|" + shopDisplay);
+		if (room.id === '' && this.broadcasting) {
+			return true;
+		} else {
+			var buttonStyle = '';
+			var topStyle = 'background: linear-gradient(10deg, #66ccff, #b3e6ff, #e5f7ff); color: black; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
+			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
+			var top = '<center><h3><b><u></u></b></h3><table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
+			var bottom = '</table><br /></center>';
+			function table(item, desc, price) {
+				return '<tr><td style="' + descStyle + '"><button title="Click this button to buy a(n) ' + item + ' from the shop" style="' + buttonStyle + '" name="send" value="/buy ' + item + '">' + item + '</button></td><td style="' + descStyle + '">' + desc + '</td><td style="' + descStyle + '">' + price + '</td></tr>';
+			}
+			return this.sendReply('|raw|' +
+				top +
+				table("Fix", "Buys the ability to alter your current custom avatar or trainer card. (don\'t buy if you have neither)", 5) +
+				table("League Room", "Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.", 5) +
+				table("Symbol", "Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)", 5) +
+				table("Ticket", "Buys a lottery ticket for a chance to win big money.", 5) +
+				table("Avatar", "Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)", 5) +
+				table("Trainer Card", "Buys a trainer card which shows information through a command. (You supply, can be refused)", 5) +
+				table("Room", "Buys a chatroom for you to own. (within reason, can be refused)", 5) +
+				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 100) +
+				bottom
+			);
+		}
 	},
 	shophelp: ["/shop - Display items you can buy with money."],
 
