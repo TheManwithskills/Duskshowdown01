@@ -9,7 +9,8 @@ var shop = [
 	['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)', 10],
 	['Trainer Card', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 20],
 	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 25],
-	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 100]
+        ['Room Shop', 'Buys a room shop that you can have for your room!', 40],
+	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50]
 ];
 
 var shopDisplay = getShopDisplay(shop);
@@ -288,7 +289,7 @@ exports.commands = {
 			var topStyle = 'background: linear-gradient(10deg, #66ccff, #b3e6ff, #e5f7ff); color: black; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
 			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
 			var top = '<center><h3><b><u></u></b></h3><table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
-			var bottom = '</table><br /></center>';
+			var bottom = '';
 			function table(item, desc, price) {
 				return '<tr><td style="' + descStyle + '"><button title="Click this button to buy a(n) ' + item + ' from the shop" style="' + buttonStyle + '" name="send" value="/buy ' + item + '">' + item + '</button></td><td style="' + descStyle + '">' + desc + '</td><td style="' + descStyle + '">' + price + '</td></tr>';
 			}
@@ -298,10 +299,11 @@ exports.commands = {
 				table("League Room", "Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.", 5) +
 				table("Symbol", "Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)", 5) +
 				table("Ticket", "Buys a lottery ticket for a chance to win big money.", 5) +
-				table("Avatar", "Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)", 5) +
-				table("Trainer Card", "Buys a trainer card which shows information through a command. (You supply, can be refused)", 5) +
-				table("Room", "Buys a chatroom for you to own. (within reason, can be refused)", 5) +
-				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 100) +
+				table("Avatar", "Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)", 10) +
+				table("Trainer Card", "Buys a trainer card which shows information through a command. (You supply, can be refused)", 20) +
+				table("Room", "Buys a chatroom for you to own. (within reason, can be refused)", 25) +
+				table("Room Shop", "Buys a room shop for you to own in your room. (within reason, can be refused)", 40) +
+				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 50) +
 				bottom
 			);
 		}
