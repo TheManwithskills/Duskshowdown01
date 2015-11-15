@@ -4,7 +4,7 @@
   **************/
  
   body {
-    background: #EEE url("http://i.imgur.com/yF3T8Li.png") no-repeat left top;
+    background: #EEE url("http://i.imgur.com/1FQbEBP.jpg?1") no-repeat left top;
   }
 
  .button{background:#33ccff!important;border:solid 1px black!important;}
@@ -439,6 +439,15 @@
   .pm-log, .pm-window.focused .pm-log {
     border-color: #000000;
   }
+
+  #lobby-userlist-user-knightchar em.group, #staff-userlist-user-knightchar em.group, #shadowbanroom-userlist-user-knightchar em.group {
+    color: #0066cc;
+  }
+
+  #lobby-userlist-user-ransei em.group, #staff-userlist-user-ransei em.group, #shadowbanroom-userlist-user-ransei, #othermetas-userlist-user-ransei em.group {
+    color: #ff0000;
+
+}
                     
 .userlist li button:hover {
 	background:rgba(244, 244, 244, 0.5)
@@ -461,4 +470,54 @@
 
   #lobby-userlist-user-yourmagic, #staff-userlist-user-yourmagic, #shadowbanroom-userlist-user-yourmagic, #casino-userlist-user-yourmagic, #tournaments-userlist-user-yourmagic { 
     background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/547.png") right no-repeat;
+  }
+
+  #staff-userlist-user-iriseevee, #shadowbanroom-userlist-user-iriseevee, #roleplaying-userlist-user-iriseevee { 
+    background: rgba(244, 244, 244, 0.8) url("lobby") right no-repeat;
+  }
+
+  #lobby-userlist-user-iriseevee, #staff-userlist-user-iriseevee, #shadowbanroom-userlist-user-iriseevee, #roleplaying-userlist-user-iriseevee { 
+    background: rgba(244, 244, 244, 0.8) url("http://piskel-imgstore-b.appspot.com/img/007cc11c-8110-11e5-aace-4fffcba36cdb.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-iriseevee, #staff-userlist-user-iriseevee, #shadowbanroom-userlist-user-iriseevee, #roleplaying-userlist-user-iriseevee { 
+    background: rgba(244, 244, 244, 0.8) url("http://piskel-imgstore-b.appspot.com/img/3ee9136b-7c6d-11e5-9e20-91015ec25697.gif") right no-repeat;
+            }                  
+
+ 
+
+  #lobby-userlist-user-nerderator  em.group, #staff-userlist-user-nerderatorem.group, #steam-userlist-user-nerderatorem.group { 
+    color:blue;
+  }
+
+  #steam-userlist-user-4dffff  em.group, #theartbotshop-userlist-user-4dffffem.group { 
+    color:Lobby;
+  }
+
+  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
+    color:aqua;
+  }
+
+  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
+    color:#00ffff;
+  }
+
+  #lobby-userlist-user-legacyprofkraze  em.group, #casinosociedadedivina-userlist-user-legacyprofkrazeem.group { 
+    color:00ffff;
+  }
+
+  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
+    color:cc33ff;
+  }
+
+  #lobby-userlist-user-nerderator  em.group, #steam-userlist-user-nerderatorem.group, #theartandbotshop-userlist-user-nerderatorem.group { 
+    color:teal;
+  }
+
+  #lobby-userlist-user-01charizard  em.group, #staff-userlist-user-01charizardem.group, #shadowbanroom-userlist-user-01charizardem.group, #tournaments-userlist-user-01charizardem.group, #casino-userlist-user-01charizardem.group, #femalehq-userlist-user-01charizardem.group, #theartbotshop-userlist-user-01charizardem.group, #othermetas-userlist-user-01charizardem.group, #roleplaying-userlist-user-01charizardem.group, #monotype-userlist-user-01charizardem.group, #steam-userlist-user-01charizardem.group { 
+    color:#ff6600;
+  }
+
+  #lobby-userlist-user-01charizard  em.group, #staff-userlist-user-01charizard  em.group, #shadowbanroom-userlist-user-01charizard  em.group, #casino-userlist-user-01charizard  em.group, #tournaments-userlist-user-01charizard  em.group, #femalehq-userlist-user-01charizard  em.group, #theartbotshop-userlist-user-01charizard  em.group, #othermetas-userlist-user-01charizard  em.group, #steam-userlist-user-01charizard  em.group { 
+    color:#ff6600;
   }
