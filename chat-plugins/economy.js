@@ -10,6 +10,7 @@ var shop = [
 	['Trainer Card', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 20],
 	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 25],
         ['Room Shop', 'Buys a room shop that you can have for your room!', 40],
+        ['Symbol Color', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 40],
 	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50]
 ];
 
@@ -286,9 +287,9 @@ exports.commands = {
 			return true;
 		} else {
 			var buttonStyle = '';
-			var topStyle = 'background: linear-gradient(10deg, #66ccff, #b3e6ff, #e5f7ff); color: black; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
+			var topStyle = 'background: linear-gradient(10deg, #b3e6ff, #e5f7ff); color: ; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
 			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
-			var top = '<center><h3><b><u></u></b></h3><table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
+			var top = '<table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
 			var bottom = '';
 			function table(item, desc, price) {
 				return '<tr><td style="' + descStyle + '"><button title="Click this button to buy a(n) ' + item + ' from the shop" style="' + buttonStyle + '" name="send" value="/buy ' + item + '">' + item + '</button></td><td style="' + descStyle + '">' + desc + '</td><td style="' + descStyle + '">' + price + '</td></tr>';
@@ -303,6 +304,7 @@ exports.commands = {
 				table("Trainer Card", "Buys a trainer card which shows information through a command. (You supply, can be refused)", 20) +
 				table("Room", "Buys a chatroom for you to own. (within reason, can be refused)", 25) +
 				table("Room Shop", "Buys a room shop for you to own in your room. (within reason, can be refused)", 40) +
+				table("Symbol Color", "Buys a symbol color that can be applied to the userlist of 3 rooms.", 50) +
 				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 50) +
 				bottom
 			);
