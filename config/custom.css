@@ -7,7 +7,7 @@
     background: #EEE url("http://i.imgur.com/yF3T8Li.png") no-repeat left top;
   }
 
- .button{background:#003399!important;border:solid 1px black!important;}
+ .button{background:#33ccff!important;border:solid 1px black!important;}
 
 
 .menugroup .select:hover, .menugroup .button:hover {
@@ -457,4 +457,8 @@
 
   #lobby-userlist-user-ashyudhajit, #casino-userlist-user-ashyudhajit, #femalehq-userlist-user-ashyudhajit { 
     background: rgba(244, 244, 244, 0.8) url("https://lh5.googleusercontent.com/proxy/ro4tCC3hCK0CDO7R_QBEtQAlZs_QG7ZAmjarEnJb7-xSjr1kTvjsy7gEMehkUNSlx3Vjb4cFzy29AYrnNs_0NStZnWO8vEHmrel-iMciP3Lfr6HNwRim1J7wemtgyEyW1Kx-xTXOycVClPX_TS5vbBylkw_XS15rTrY=w38-h25-nc") right no-repeat;
+  }
+
+  #lobby-userlist-user-yourmagic, #staff-userlist-user-yourmagic, #shadowbanroom-userlist-user-yourmagic, #casino-userlist-user-yourmagic, #tournaments-userlist-user-yourmagic { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/547.png") right no-repeat;
   }
