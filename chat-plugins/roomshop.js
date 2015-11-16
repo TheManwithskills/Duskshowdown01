@@ -79,8 +79,6 @@ function findItem(item, money, shop) {
 exports.commands = {
 	roomshop: function(target, room, user, connection){
         if (!this.canBroadcast()) return;
-		if(room.chatRoomData.isLeague) return this.sendReply('Leagues have their own shop. Use \'/leagueshop view\' to view their wares.');
-        if(!room.chatRoomData.roomshop && !this.can('makeroom')) return this.sendReply('Can only be used in rooms which have bought a shop');
         var targets = target.split(',');
         if(targets[0] != 'view' && targets[0] != 'list' && targets[0] != 'add' && targets[0] != 'delete' && targets[0] != 'remove' && targets[0] != 'viewlog' && targets[0] != 'bank' && targets[0] != 'buy' && targets[0] != 'help' && targets[0] != 'enable') return this.sendReply('/roomshop help - List available /roomshop commands.');
         if(targets[0] == 'on'){
@@ -96,13 +94,13 @@ exports.commands = {
 			return this.sendReply('Room shop has been disabled for this room');
 		}
 		if(targets[0] == 'help'){
-            return this.sendReply('|raw|The following is a list of room shop commands:<br/>'+
-                            '/shop view/list - Shows a complete list of the shop items.<br/>'+
-                            '/shopshop add, [item name], [description], [price] - Adds an item to the shop.<br/>'+
-                            '/shopshop delete/remove, [item name] - Removes an item from the shop.<br/>'+
-                            '/shopshop buy, [item name] - Purchase an item from the shop.<br/>'+
-                            '/shopshop viewlog, [number of lines] - Views the last 15 lines in the shop log.<br/>'+
-                            '/shopshop bank, [username] - Sets the room bank to [username]. The room bank receives all funds from the puchases in the shop.')
+            return this.sendReplyBox('The following is a list of room shop commands:<br/>'+
+                            '/roomshop view/list - Shows a complete list of the shop items.<br/>'+
+                            '/roomshop add, [item name], [description], [price] - Adds an item to the shop.<br/>'+
+                            '/roomshop delete/remove, [item name] - Removes an item from the shop.<br/>'+
+                            '/roomshop buy, [item name] - Purchase an item from the shop.<br/>'+
+                            '/roomshop viewlog, [number of lines] - Views the last 15 lines in the shop log.<br/>'+
+                            '/roomshop bank, [username] - Sets the room bank to [username]. The room bank receives all funds from the puchases in the shop.')
         }
         var roomName = toId(room.title);
         if (fs.existsSync('storage-files/'+roomName+'shop.json')) {
@@ -119,7 +117,7 @@ exports.commands = {
     		    var desc = shop.itemList[i].desc;
     		    var price = shop.itemList[i].price;
     		    shopList += '<tr>' + 
-    		        '<td align="center"><button name="send" value="/shopshop buy, '+ item + '">' + item + '</button>' + '</td>' + 
+    		        '<td align="center"><button name="send" value="/roomshop buy, '+ item + '">' + item + '</button>' + '</td>' + 
     		        '<td align="center">'+  desc + '</td>' + 
     		        '<td align="center">' + price + '</td>' + 
     		        '</tr>';
