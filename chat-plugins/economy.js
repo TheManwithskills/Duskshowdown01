@@ -10,9 +10,11 @@ var shop = [
 	['Trainer Card', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 20],
 	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 25],
         ['Room Shop', 'Buys a room shop that you can have for your room!', 40],
-        ['Symbol Color', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50],
+        ['Symbol Color', 'Buys a Symbol Color that can be applied to the userlist of 3 rooms.', 50],
 	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50],
-	['Color Change', 'Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.', 100]
+	['Name Color', 'Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.', 100],
+        ['Official Room Status', 'Promotes your room to be an official room. Will be de-officialed if not treated well.', 50],
+	['Global Voice', 'Promotes you to global voice. Don't abuse it or else you will get demoted.', 50]
 ];
 
 var shopDisplay = getShopDisplay(shop);
@@ -307,7 +309,9 @@ exports.commands = {
 				table("Room Shop", "Buys a room shop for you to own in your room. (within reason, can be refused)", 40) +
 				table("Symbol Color", "Buys a symbol color that can be applied to the userlist of 3 rooms.", 50) +
 				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 50) +
-				table("Color Change", "Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.", 100) +
+				table("Name Color", "Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.", 100) +
+				table("Official Room Status", "Promotes your room to be official for sometime. ( Will be de-officialed if not taken care of wisely)", 500) +
+				table("Global Voice", "Promotes you to Global Voice. Do not abuse this rank, or else it will get you demoted from this rank.", 1000) +
 				bottom
 			);
 		}
