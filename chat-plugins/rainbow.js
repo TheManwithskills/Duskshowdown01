@@ -199,6 +199,32 @@ exports.commands = {
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
+
+        },
+       
+        namepurple: function (target, room, user){
+          if (user.can('hotpatch', null, room)) {
+                var colors = ['#8000ff', '#39005e', '#c07bed'];
+                if(!target) return this.sendReply('/rainbow message');
+                        userColor = '',
+                        currentDate = new Date(),
+                        randomNumber = '';
+                        for(var x = 0; x < user.name.length; x++){
+                                randomNumber = Math.floor(Math.random() * colors.length);
+                                if(user.name.substring(x, x + 1) !== undefined){
+                                        userColor += '<font color="' + colors[randomNumber] + '">' + user.name.substring(x, x + 1) + '</font>';
+                                } else {
+                                        userColor += '<font color="' + colors[randomNumber] + '">:</font>';
+                                }
+                        }
+                        if(target.indexOf('/me') > -1) {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
+                        } else {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: ' + target);
+                        }
+          }
+          else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
+
         },
        
         nameyellow: function (target, room, user){
