@@ -14,7 +14,7 @@ var shop = [
 	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50],
 	['Name Color', 'Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.', 100],
         ['Official Room Status', 'Promotes your room to be an official room. Will be de-officialed if not treated well.', 50],
-	['Global Voice', 'Promotes you to global voice. Don't abuse it.', 50]
+	['Global Voice', 'Promotes you to global voice. Dont abuse it.', 50]
 ];
 
 var shopDisplay = getShopDisplay(shop);
