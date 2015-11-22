@@ -10,8 +10,9 @@ var shop = [
 	['Trainer Card', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 20],
 	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 25],
         ['Room Shop', 'Buys a room shop that you can have for your room!', 40],
-        ['Symbol Color', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 40],
-	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50]
+        ['Symbol Color', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50],
+	['Userlist Icon', 'Buys a userlist icon that can be applied to the userlist of 3 rooms.', 50],
+	['Color Change', 'Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.', 100]
 ];
 
 var shopDisplay = getShopDisplay(shop);
@@ -306,6 +307,7 @@ exports.commands = {
 				table("Room Shop", "Buys a room shop for you to own in your room. (within reason, can be refused)", 40) +
 				table("Symbol Color", "Buys a symbol color that can be applied to the userlist of 3 rooms.", 50) +
 				table("Userlist Icon", "Buys a userlist icon that can be applied to the userlist of 3 rooms.", 50) +
+				table("Color Change", "Buys an command in which you can change your color using a gradient / ordinary color. You can only be able to use this color.", 100) +
 				bottom
 			);
 		}
