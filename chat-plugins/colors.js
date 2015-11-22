@@ -1,4 +1,4 @@
-	var style = "background:none;border:0;padding:0 1px 0 0;font-family:Arial Black,Verdana,Helvetica,sans-serif;font-size:9.3pt;cursor:pointer";
+	var style = "background:none;border:0;padding:0 5px 0 0;font-family:Arial Black,Verdana,Helvetica,sans-serif;font-size:9.5pt;cursor:pointer";
 
 exports.commands = {
        
@@ -6,7 +6,7 @@ exports.commands = {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center><font size = 3>Name Colors:</font><br />' +
                                   '<p> Change your nickname color<br /> Use /name[color] - Change your nickname color' +
-                                  '<p> Available Colors: Rainbow, Blue, White, Black, Orange, Green, Red, Pink and Yellow </p>' +
+                                  '<p> Available Colors: Rainbow, Blue, White, Black, Orange, Green, Red, Pink and Yellow. You can get your own Name Color by buying it from the shop. </p>' +
                                   '<font align="left" ><b>By: Darkero'
                                                 );
         },
@@ -53,7 +53,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
@@ -77,7 +77,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
@@ -101,7 +101,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           
         },
@@ -124,7 +124,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                        } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
@@ -148,7 +148,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
@@ -172,7 +172,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                        } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
@@ -196,7 +196,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
 
         },
@@ -219,7 +219,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                       } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
 
         },
@@ -242,7 +242,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>:' + target);
                         }
         },
        
@@ -262,9 +262,9 @@ exports.commands = {
                                 }
                         }
                         if(target.indexOf('/me') > -1) {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
+                                room.add('|raw|<small></small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                       } else {
-                                room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                room.add('|raw|<small></small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>' + target);
                         }
         },
        
@@ -286,7 +286,7 @@ exports.commands = {
                         if(target.indexOf('/me') > -1) {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b> <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
                         } else {
-                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + '</b>:' + target);
+                                 room.add('|raw|<small>' + user.group + '</small><b>' + "<button name='parseCommand' value='/user " + user.name + "' style='" + style + "'>"  + userColor + ':</b>' + target);
                         }
           }
           else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
