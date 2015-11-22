@@ -82,7 +82,7 @@ exports.commands = {
         },
        
         nameblack: function (target, room, user){
-          if (user.can('hotpatch', null, room)) {
+		if (!this.can('hotpatch') && !user.vip && user.userid !== 'traineralain') return this.sendReply('/nameblack - Access denied.');
                 var colors = ['#000000'];
                 if(!target) return this.sendReply('/rainbow message');
                         userColor = '',
@@ -101,8 +101,7 @@ exports.commands = {
                         } else {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: ' + target);
                         }
-          }
-          else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
+          
         },
        
         nameorange: function (target, room, user){
@@ -203,7 +202,7 @@ exports.commands = {
         },
        
         namepurple: function (target, room, user){
-          if (user.can('hotpatch', null, room)) {
+		if (user.userid !== 'natm') return this.sendReply('/namepurple - Access denied.');
                 var colors = ['#8000ff', '#39005e', '#c07bed'];
                 if(!target) return this.sendReply('/rainbow message');
                         userColor = '',
@@ -222,8 +221,6 @@ exports.commands = {
                         } else {
                                 room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: ' + target);
                         }
-          }
-          else return this.errorReply('You must be a Shadowfire DEV/Admin to use this command.');
 
         },
        
