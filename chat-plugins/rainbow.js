@@ -224,6 +224,51 @@ exports.commands = {
 
         },
        
+        auracolor: function (target, room, user){
+		if (user.userid !== 'aurastormlucario') return this.errorReply('/auracolor - Access denied.');
+                var colors = ['#007fff', '#1560bd'];
+                if(!target) return this.sendReply('/rainbow message');
+                        userColor = '',
+                        currentDate = new Date(),
+                        randomNumber = '';
+                        for(var x = 0; x < user.name.length; x++){
+                                randomNumber = Math.floor(Math.random() * colors.length);
+                                if(user.name.substring(x, x + 1) !== undefined){
+                                        userColor += '<font color="' + colors[randomNumber] + '">' + user.name.substring(x, x + 1) + '</font>';
+                                } else {
+                                        userColor += '<font color="' + colors[randomNumber] + '">:</font>';
+                                }
+                        }
+                        if(target.indexOf('/me') > -1) {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
+                        } else {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: ' + target);
+                        }
+        },
+       
+        alaincolor: function (target, room, user){
+		if (user.userid !== 'traineralain') return this.errorReply('/alaincolor - Access denied.');
+                var colors = ['#00ffff'];
+                if(!target) return this.sendReply('/rainbow message');
+                        userColor = '',
+                        currentDate = new Date(),
+                        randomNumber = '';
+                        for(var x = 0; x < user.name.length; x++){
+                                randomNumber = Math.floor(Math.random() * colors.length);
+                                if(user.name.substring(x, x + 1) !== undefined){
+                                        userColor += '<font color="' + colors[randomNumber] + '">' + user.name.substring(x, x + 1) + '</font>';
+                                } else {
+                                        userColor += '<font color="' + colors[randomNumber] + '">:</font>';
+                                }
+                        }
+                        if(target.indexOf('/me') > -1) {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: <i>' + Tools.escapeHTML(target.substring(3, target.length)) + '</i>');
+                        } else {
+                                room.add('|raw|<small>' + user.group + '</small><b>' + userColor + '</b>: ' + target);
+                        }
+
+        },
+       
         nameyellow: function (target, room, user){
           if (user.can('hotpatch', null, room)) {
                 var colors = ['#FFFF00'];
