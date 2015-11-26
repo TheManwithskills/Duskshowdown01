@@ -89,8 +89,16 @@
  
   button:hover {
     border: 1px solid #777;
+                       
   }
- 
+  
+  button {
+    background:#3399ff;
+    border-radius: 5px;
+    color: #FFF;
+    border: 1px solid #3BBFD6;
+  }
+  
   .infobox {
     border: 1px solid #0B1361;
     padding: 6px 6px;
@@ -207,7 +215,13 @@
  
   .credits h2 {
     color: #2D3459;
-  }
+
+}
+
+.mainmenufooter a
+
+
+  
  
   a.subtle, .credits ul li p, .credits ul {
     color: #37348E;
@@ -484,40 +498,102 @@
     background: rgba(244, 244, 244, 0.8) url("http://piskel-imgstore-b.appspot.com/img/3ee9136b-7c6d-11e5-9e20-91015ec25697.gif") right no-repeat;
             }                  
 
- 
-
-  #lobby-userlist-user-nerderator  em.group, #staff-userlist-user-nerderatorem.group, #steam-userlist-user-nerderatorem.group { 
-    color:blue;
+  #lobby-userlist-user-01charizard  em.group, #staff-userlist-user-01charizard  em.group, #shadowbanroom-userlist-user-01charizard  em.group, #casino-userlist-user-01charizard  em.group, #tournaments-userlist-user-01charizard  em.group, #femalehq-userlist-user-01charizard  em.group, #theartbotshop-userlist-user-01charizard  em.group, #othermetas-userlist-user-01charizard  em.group, #steam-userlist-user-01charizard  em.group { 
+    color:#ff9900;
   }
 
-  #steam-userlist-user-4dffff  em.group, #theartbotshop-userlist-user-4dffffem.group { 
-    color:Lobby;
+
+
+
+
+  #lobby-userlist-user-noivernx60  em.group, #staff-userlist-user-noivernx60  em.group, #shadowbanroom-userlist-user-noivernx60  em.group, #tournaments-userlist-user-noivernx60  em.group, #casino-userlist-user-noivernx60  em.group, #shadowfireleague-userlist-user-noivernx60  em.group { 
+    color:#440CB6;
   }
 
-  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
+  #lobby-userlist-user-yourmagic  em.group { 
+    color:cyan;
+  }
+
+  #lobby-userlist-user-nerdeator  em.group, #steam-userlist-user-nerdeator  em.group, #shadowfireleague-userlist-user-nerdeator  em.group { 
     color:aqua;
   }
 
-  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
-    color:#00ffff;
+  #lobby-userlist-user-yourmagic  em.group, #casino-userlist-user-yourmagic  em.group, #-userlist-user-yourmagic  em.group { 
+    color:red;
   }
 
-  #lobby-userlist-user-legacyprofkraze  em.group, #casinosociedadedivina-userlist-user-legacyprofkrazeem.group { 
-    color:00ffff;
+  #lobby-userlist-user-defiantquizzy, #staff-userlist-user-defiantquizzy, #shadowbanroom-userlist-user-defiantquizzy, #tournaments-userlist-user-defiantquizzy, #casino-userlist-user-defiantquizzy { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/248-mega.png") right no-repeat;
   }
 
-  #lobby-userlist-user-legacyprofkraze  em.group, #casino-userlist-user-legacyprofkrazeem.group, #sociedadedivina-userlist-user-legacyprofkrazeem.group { 
-    color:cc33ff;
+  #lobby-userlist-user-ransei, #tournaments-userlist-user-ransei, #othermetas-userlist-user-ransei, #staff-userlist-user-ransei, #shadowban-userlist-user-ransei { 
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/4D5acIr.png") right no-repeat;
   }
 
-  #lobby-userlist-user-nerderator  em.group, #steam-userlist-user-nerderatorem.group, #theartandbotshop-userlist-user-nerderatorem.group { 
-    color:teal;
+  #lobby-userlist-user-traineralain, #staff-userlist-user-traineralain, #shadowbanroom-userlist-user-traineralain, #tournaments-userlist-user-traineralain, #staff-userlist-user-traineralain, #femalehq-userlist-user-traineralain, #roleplaying-userlist-user-traineralain, #theartbotshop-userlist-user-traineralain, #othermetas-userlist-user-traineralain, #steam-userlist-user-traineralain, #monotype-userlist-user-traineralain, #casino-userlist-user-traineralain { 
+    background: rgba(244, 244, 244, 0.8) url("http://i.imgur.com/kRDAHhv.gif") right no-repeat;
   }
 
-  #lobby-userlist-user-01charizard  em.group, #staff-userlist-user-01charizardem.group, #shadowbanroom-userlist-user-01charizardem.group, #tournaments-userlist-user-01charizardem.group, #casino-userlist-user-01charizardem.group, #femalehq-userlist-user-01charizardem.group, #theartbotshop-userlist-user-01charizardem.group, #othermetas-userlist-user-01charizardem.group, #roleplaying-userlist-user-01charizardem.group, #monotype-userlist-user-01charizardem.group, #steam-userlist-user-01charizardem.group { 
-    color:#ff6600;
+  #lobby-userlist-user-quizzyy, #catchandevolve-userlist-user-quizzyy, #tournaments-userlist-user-quizzyy { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/248-mega.png") right no-repeat;
   }
 
-  #lobby-userlist-user-01charizard  em.group, #staff-userlist-user-01charizard  em.group, #shadowbanroom-userlist-user-01charizard  em.group, #casino-userlist-user-01charizard  em.group, #tournaments-userlist-user-01charizard  em.group, #femalehq-userlist-user-01charizard  em.group, #theartbotshop-userlist-user-01charizard  em.group, #othermetas-userlist-user-01charizard  em.group, #steam-userlist-user-01charizard  em.group { 
-    color:#ff6600;
+  #thehangout-userlist-user-ggdaca, #lobby-userlist-user-ggdaca, #staff-userlist-user-ggdaca, #shadowbanroom-userlist-user-ggdaca, #casino-userlist-user-ggdaca { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/257.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-phoenixlion, #catchandevolve-userlist-user-phoenixlion, #tournaments-userlist-user-phoenixlion, #casino-userlist-user-phoenixlion { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/454.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-quizzyy, #catchandevolve-userlist-user-quizzyy, #quizzyscave-userlist-user-quizzyy, #staff-userlist-user-quizzyy { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/248-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-thndr  em.group, #casino-userlist-user-thndr  em.group, #tournaments-userlist-user-thndr  em.group, #swag-userlist-user-thndr  em.group { 
+    color:blue;
+  }
+
+  #lobby-userlist-user-legacyprofkraze  em.group, #quizzyscave-userlist-user-legacyprofkraze  em.group, #swag-userlist-user-legacyprofkraze  em.group { 
+    color:0099ff;
+  }
+
+  #lobby-userlist-user-mazambo, #staff-userlist-user-mazambo, #shadowbanroom-userlist-user-mazambo, #tournaments-userlist-user-mazambo, #casino-userlist-user-mazambo, #theartbotshop-userlist-user-mazambo { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/350.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-trublaze, #staff-userlist-user-trublaze, #shadowbanroom-userlist-user-trublaze, #casino-userlist-user-trublaze, #tournaments-userlist-user-trublaze, #1v1-userlist-user-trublaze, #femalehq-userlist-user-trublaze, #catchandevolve-userlist-user-trublaze, #arcadia-userlist-user-trublaze, #othermetas-userlist-user-trublaze { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/257-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-ransei, #othertiers-userlist-user-ransei, #staff-userlist-user-ransei, #tournaments-userlist-user-ransei { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokecons_action/493.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-allegiantazurite, #azuriteroom-userlist-user-allegiantazurite, #othertiers-userlist-user-allegiantazurite, #1v1-userlist-user-allegiantazurite { 
+    background: rgba(244, 244, 244, 0.8) url("http://media.pldh.net/pokexycons/184.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-thunderren, #thunderleague-userlist-user-thunderren, #casino-userlist-user-thunderren { 
+    background: rgba(244, 244, 244, 0.8) url("http://sprites.pokecheck.org/sicon/330.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-thunderren, #thunderleague-userlist-user-thunderren, #casino-userlist-user-thunderren { 
+    background: rgba(244, 244, 244, 0.8) url("http://orig13.deviantart.net/2e4e/f/2015/062/b/5/shiny_the_flygon_icon_by_the_shiny_store-d8kbesg.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-apexinfinite, #apexleague-userlist-user-apexinfinite, #quizzyscave-userlist-user-apexinfinite { 
+    background: rgba(244, 244, 244, 0.8) url("http://forums.tppc.info/images/pokemon/450.gif") right no-repeat;
+  }
+
+  #lobby-userlist-user-ashyudhajit, #casino-userlist-user-ashyudhajit, #apexleague-userlist-user-ashyudhajit { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokexycons/384-mega.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-darkero, #staff-userlist-user-darkero { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokemon/md2/sprite/350.png") right no-repeat;
+  }
+
+  #lobby-userlist-user-feverick, #staff-userlist-user-feverick { 
+    background: rgba(244, 244, 244, 0.8) url("http://pldh.net/media/pokemon/md2/sprite/350.png") right no-repeat;
   }
