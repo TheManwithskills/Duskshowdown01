@@ -465,7 +465,7 @@ exports.commands = {
 			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
 
 
-		this.sendReply("|raw|<div class='infobox'><h2><center><font color=#000000>" + user.name + " has started a dice game for </font><font color=red>" + amount + "</font><font color=black>" + currencyName(amount) + ".</font><br><button name='send' value='/joindice'>Click to join.</button></center></h2></div>");
+		room.addRaw("<div class='infobox'><h2><center><font color=#000000>" + user.name + " has started a dice game for </font><font color=red>" + amount + "</font><font color=black>" + currencyName(amount) + ".</font><br><button name='send' value='/joindice'>Click to join.</button></center></h2></div>");
 	},
 	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
 
