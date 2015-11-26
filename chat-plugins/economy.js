@@ -299,8 +299,8 @@ exports.commands = {
 			var buttonStyle = '';
 			var topStyle = 'background: linear-gradient(10deg, #b3e6ff, #e5f7ff); color: ; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
 			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
-			var top = '<table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
-			var bottom = '';
+			var top = '<div style="background:#99ccff;"><table><tr><center><font color="#000000"><b><p>Shadowfire Shop</b></p></font><table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
+			var bottom = '<div style="background:#E0F8F1;"><tr><table><center><font color="#000000"><em><b> To buy an item from the shop, use /buy command.</em></b></p></font>';
 			function table(item, desc, price) {
 				return '<tr><td style="' + descStyle + '"><button title="Click this button to buy a(n) ' + item + ' from the shop" style="' + buttonStyle + '" name="send" value="/buy ' + item + '">' + item + '</button></td><td style="' + descStyle + '">' + desc + '</td><td style="' + descStyle + '">' + price + '</td></tr>';
 			}
@@ -347,7 +347,7 @@ exports.commands = {
 	buyhelp: ["/buy [command] - Buys an item from the shop."],
 
 	customsymbol: function (target, room, user) {
-		if (!user.canCustomSymbol && user.id !== user.userid) return this.sendReply("You need to buy this item from the shop.");
+	 	if(!user.canCustomSymbol && !user.can('vip')) return this.sendReply('You need to buy this item from the shop to use.');
 		if (!target || target.length > 1) return this.parse('/help customsymbol');
 		if (target.match(/[A-Za-z\d]+/g) || '|?!+$%@\u2605=&~#\u03c4\u00a3\u03dd\u03b2\u039e\u03a9\u0398\u03a3\u00a9'.indexOf(target) >= 0) {
 			return this.sendReply("Sorry, but you cannot change your symbol to this for safety/stability reasons.");
@@ -462,7 +462,10 @@ exports.commands = {
 		// Prevent ending a dice game too early.
 		room.dice.startTime = Date.now();
 
-		room.addRaw("<div class='infobox'><h2><center><font color=#24678d>" + user.name + " has started a dice game for </font><font color=red>" + amount + "</font><font color=#24678d>" + currencyName(amount) + ".</font><br><button name='send' value='/joindice'>Click to join.</button></center></h2></div>");
+			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
+
+
+		this.sendReply("|raw|<div class='infobox'><h2><center><font color=#000000>" + user.name + " has started a dice game for </font><font color=red>" + amount + "</font><font color=black>" + currencyName(amount) + ".</font><br><button name='send' value='/joindice'>Click to join.</button></center></h2></div>");
 	},
 	startdicehelp: ["/startdice [bet] - Start a dice game to gamble for money."],
 
@@ -479,7 +482,7 @@ exports.commands = {
 				if (err) throw err;
 				if (!room.dice.p1) {
 					room.dice.p1 = user.userid;
-					room.addRaw("<b>" + user.name + " has joined the dice game.</b>");
+					room.addRaw("<b><font color=blue>" + user.name + " has joined the dice game.</b>");
 					return room.update();
 				}
 				room.dice.p2 = user.userid;
@@ -527,7 +530,7 @@ exports.commands = {
 			});
 		}
 		delete room.dice;
-		room.addRaw("<b>" + user.name + " ended the dice game.</b>");
+		room.addRaw("<font color=blue><b>" + user.name + " ended the dice game.</b>");
 	},
 
 	ticket: 'tickets',
