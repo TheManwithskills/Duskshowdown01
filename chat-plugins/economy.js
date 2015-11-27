@@ -299,8 +299,8 @@ exports.commands = {
 			var buttonStyle = '';
 			var topStyle = 'background: linear-gradient(10deg, #b3e6ff, #e5f7ff); color: ; border: 1px solid #635b00; padding: 2px; border-radius: 5px;';
 			var descStyle = 'border-radius: 5px; border: 1px solid #3399ff; background: #66ccff; color: black;';
-			var top = '<div style="background:#99ccff;"><table><tr><center><font color="#000000"><b><p>Shadowfire Shop</b></p></font><table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
-			var bottom = '<div style="background:#E0F8F1;"><tr><table><center><font color="#000000"><em><b> To buy an item from the shop, use /buy command.</em></b></p></font>';
+			var top = '<table style="' + topStyle + '" border="10" cellspacing ="5" cellpadding="5"><tr><th>Item</th><th>Description</th><th>Cost</th></tr>';
+			var bottom = '<table><td style="' + descStyle + '">To buy an item from the shop, use /buy command. If you want to know how to get money, do /getbucks.</td>';
 			function table(item, desc, price) {
 				return '<tr><td style="' + descStyle + '"><button title="Click this button to buy a(n) ' + item + ' from the shop" style="' + buttonStyle + '" name="send" value="/buy ' + item + '">' + item + '</button></td><td style="' + descStyle + '">' + desc + '</td><td style="' + descStyle + '">' + price + '</td></tr>';
 			}
@@ -321,6 +321,7 @@ exports.commands = {
 				table("Official Room Status", "Promotes your room to be official for sometime. ( Will be de-officialed if not taken care of wisely)", 500) +
 				table("Global Voice", "Promotes you to Global Voice. Do not abuse this rank, or else it will get you demoted from this rank.", 1000) +
 				bottom
+
 			);
 		}
 	},
